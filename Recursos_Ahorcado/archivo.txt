@@ -1,0 +1,10 @@
+MURCIELAGO:Animal que tiene todas las vocales.
+RONALDO:Mejor Jugador del Real Madrid.
+LEONARDO:Autor de la pintura "La Gioconda".
+VIKINGO:Gran guerrero con vestimenta de piel.
+QUIMICA:Ciencia que estudia los compuestos.
+AGUA:70% de esto, está compuesto el cuerpo humano.
+DROMEDARIO:Mamífero parecido al camello.
+ARCOIRIS:Resplandor colorido y luminoso en forma de arco.
+ZAPATILLA:Lo que perdío Cenicienta al dar las 12.
+ELECTRICIDAD:Forma de energía que produce efectos luminosos.

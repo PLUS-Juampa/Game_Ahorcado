@@ -47,7 +47,7 @@ public class Ahorcado extends javax.swing.JFrame {
         txtAdivinar.setEditable(false); // No permitirá que la ventana de texto sea editable por el usuario
         txtLetrasErradas.setEditable(false);    // No permitirá que la ventana de texto sea editable por el usuario
         btn_Detener.setEnabled(false);  // No permitirá al usuario interactuar con el botón
-        
+
         // En caso de no poder ser leido el archivo es porque la ubicación de este debe ser de acuerdo de dónde se esté tomando la carpeta
         File archivo = new File("/home/juampa/Escritorio/Game-AhorcadoFin/Recursos_Ahorcado/archivo.txt");    // Marca el lugar de donde se leerá el archivo de texto
         leerArchivo(archivo);   // Métoodo para leer el archivo que lleva por parámetro la hubicación del mismo
@@ -59,7 +59,7 @@ public class Ahorcado extends javax.swing.JFrame {
 
     }
 
-    // Método para ller el archivo de texto donde se encuentran almacenadas las palabras y descripciones a usar
+    // Método para leer el archivo de texto donde se encuentran almacenadas las palabras y descripciones a usar
     private void leerArchivo(File archivo) {
 
         int conta = 0;  // Variable de tipo entero 
@@ -82,7 +82,7 @@ public class Ahorcado extends javax.swing.JFrame {
         } catch (IOException ex) {
             ex.printStackTrace();
         }
-    }   // Fin de método para ller archivo de texto
+    }   // Fin de método para leer archivo de texto
 
     public void loadNextWord(int indice) {  // Método para leer las palabras en el archivo de texto
 
@@ -212,7 +212,7 @@ public class Ahorcado extends javax.swing.JFrame {
     }
 
     private void cambiaPalabras() { // Método para cambiar la palabra en caso de ser acertada
-        txtAdivinar.setText("");    // Pondrá en blanco el cuadro de texto
+        txtAdivinar.setText("");    // Pondrá en blanco el cuadro de texto donde escribe el usuario
         String mapString[] = listaPalabras.get("" + contador).split(":");   // Creación de un arreglo para almacenar las palabras que se encuentran en el archivo de texto inicando que están referenciadas por los dos puntos ":"
 
         if (contador == 9 && mapString[0].equals(txtPalabra.getText().replace(" ", ""))) {    // En caso de ser la última palabramostrará el siguiente menú
@@ -484,6 +484,10 @@ public class Ahorcado extends javax.swing.JFrame {
                 cambiaPalabras();   // método para cambiar la palabra en caso de que esta sea acertada
 
             } else {
+
+                
+                
+
                 evt.consume();  // Si la tecla pulsada no es correcta no se toma en cuenta
                 intentos++; // Se incrementa el número de intentos
                 txtLetrasErradas.setText(txtLetrasErradas.getText() + carMayus);    // Se escriba la letra que no fue correcta o no se encuentra en la palabra a adivinar en el cuadro de texto correspondiente
